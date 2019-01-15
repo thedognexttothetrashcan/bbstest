@@ -5,3 +5,6 @@ class Post(models.Model):
     create = models.DateTimeField(auto_now_add=True)
     updata = models.DateTimeField(auto_now=True)
     content = models.TextField()
+
+    class Meta:
+        ordering = ['-create']
