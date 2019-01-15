@@ -8,23 +8,39 @@ def create_post(request):
         title = request.POST.get('title')
         content = request.POST.get('content')
         post = Post.objects.create(title=title, content=content)
-        return redirect('/post/read/?post_id=%d'% post.id)
+        return redirect('/post/read/?post_id=%d' % post.id)
     else:
         return render(request, 'create_post.html')
 
+
 def edit_post(request):
-    return render(request, 'edit_post.html')
+    if request.method == 'POST':
+        post_id = int(request.POST.get('post_id'))
+        post = Post.objects.get(pk=post_id)
+
+        post.title = request.POST.get('title')
+        post.content = request.POST.get('content')
+        post.save()
+        return redirect('/post/read/?post_id=%d' % post_id)
+    else:
+        post_id = request.GET.get('post_id')
+        post = Post.objects.get(pk=post_id)
+    return render(request, 'edit_post.html', {'post': post})
+
 
 def read_post(request):
     post_id = int(request.GET.get('post_id'))
     post = Post.objects.get(pk=post_id)
-    return render(request, 'read_post.html',{'post':post})
+    return render(request, 'read_post.html', {'post': post})
+
 
 def delete_post(request):
     return render(request, 'delete_post.html')
 
+
 def post_list(request):
     return render(request, 'post_list.html')
+
 
 def search(request):
     return render(request, 'search.html')

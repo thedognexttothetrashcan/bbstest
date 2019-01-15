@@ -2,21 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2055ddda-ea80-44c6-8ea5-f7b1dcabc54b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/post/templates/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post/templates/blockers.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post/templates/create_post.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post/templates/delete_post.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post/templates/edit_post.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post/templates/post_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post/templates/read_post.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post/templates/search.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post/templates/tag_filter.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/post/templates/top10.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/statics/img/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/statics/img/icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bbs/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bbs/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bbs/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bbs/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/post/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/post/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,8 +28,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/post/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+            <state relative-caret-position="135">
+              <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -117,7 +102,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="519" />
+    <option name="x" value="531" />
     <option name="y" value="23" />
     <option name="width" value="922" />
     <option name="height" value="807" />
@@ -221,8 +206,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="519" y="23" width="922" height="807" extended-state="0" />
-    <editor active="true" />
+    <frame x="531" y="23" width="922" height="807" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -230,7 +214,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32957748" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32957748" />
       <window_info anchor="right" id="Remote Host" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49789914" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
@@ -309,8 +293,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/post/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+        <state relative-caret-position="135">
+          <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
