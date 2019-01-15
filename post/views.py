@@ -27,6 +27,10 @@ def edit_post(request):
         post = Post.objects.get(pk=post_id)
     return render(request, 'edit_post.html', {'post': post})
 
+    #     return redirect('/post/read/?post_id=%d'% post.id)
+    # else:
+    #     return render(request, 'create_post.html')
+
 
 def read_post(request):
     post_id = int(request.GET.get('post_id'))
@@ -47,3 +51,6 @@ def post_list(request):
 
 def search(request):
     return render(request, 'search.html')
+
+
+

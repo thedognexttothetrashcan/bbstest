@@ -2,6 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2055ddda-ea80-44c6-8ea5-f7b1dcabc54b" name="Default" comment="">
+<<<<<<< HEAD
+=======
+      <change afterPath="$PROJECT_DIR$/post/templates/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post/templates/blockers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post/templates/create_post.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post/templates/delete_post.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post/templates/edit_post.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post/templates/post_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post/templates/read_post.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post/templates/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post/templates/tag_filter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/post/templates/top10.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/img/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/statics/img/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bbs/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/bbs/settings.py" afterDir="false" />
+>>>>>>> 419fb14d307f9d2fe228899c0a74c5cd52681d61
       <change beforePath="$PROJECT_DIR$/bbs/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/bbs/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/post/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/post/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/post/views.py" afterDir="false" />
@@ -18,20 +34,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+<<<<<<< HEAD
       <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/post/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
               <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+=======
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/post/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+>>>>>>> 419fb14d307f9d2fe228899c0a74c5cd52681d61
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/post/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="283">
               <caret line="43" column="30" lean-forward="true" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
+=======
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/post/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="93">
+              <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+>>>>>>> 419fb14d307f9d2fe228899c0a74c5cd52681d61
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -39,6 +71,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="post_list.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/post/templates/post_list.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -48,6 +81,8 @@
           </provider>
         </entry>
       </file>
+=======
+>>>>>>> 419fb14d307f9d2fe228899c0a74c5cd52681d61
       <file leaf-file-name="read_post.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/post/templates/read_post.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -69,8 +104,13 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bbs/urls.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="264">
               <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+=======
+            <state relative-caret-position="176">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+>>>>>>> 419fb14d307f9d2fe228899c0a74c5cd52681d61
               <folding>
                 <element signature="e#637#669#0" expanded="true" />
               </folding>
@@ -93,6 +133,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/bbs/settings.py" />
         <option value="$PROJECT_DIR$/post/templates/delete_post.html" />
         <option value="$PROJECT_DIR$/post/templates/read_post.html" />
@@ -100,6 +141,15 @@
         <option value="$PROJECT_DIR$/bbs/urls.py" />
         <option value="$PROJECT_DIR$/post/views.py" />
         <option value="$PROJECT_DIR$/post/models.py" />
+=======
+        <option value="$PROJECT_DIR$/post/models.py" />
+        <option value="$PROJECT_DIR$/bbs/settings.py" />
+        <option value="$PROJECT_DIR$/post/templates/delete_post.html" />
+        <option value="$PROJECT_DIR$/post/templates/read_post.html" />
+        <option value="$PROJECT_DIR$/bbs/urls.py" />
+        <option value="$PROJECT_DIR$/post/templates/create_post.html" />
+        <option value="$PROJECT_DIR$/post/views.py" />
+>>>>>>> 419fb14d307f9d2fe228899c0a74c5cd52681d61
       </list>
     </option>
   </component>
@@ -113,7 +163,11 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
+<<<<<<< HEAD
     <option name="x" value="531" />
+=======
+    <option name="x" value="519" />
+>>>>>>> 419fb14d307f9d2fe228899c0a74c5cd52681d61
     <option name="y" value="23" />
     <option name="width" value="922" />
     <option name="height" value="807" />
@@ -141,6 +195,15 @@
               <item name="bbstest" type="462c0819:PsiDirectoryNode" />
               <item name="post" type="462c0819:PsiDirectoryNode" />
             </path>
+<<<<<<< HEAD
+=======
+            <path>
+              <item name="bbstest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bbstest" type="462c0819:PsiDirectoryNode" />
+              <item name="post" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+>>>>>>> 419fb14d307f9d2fe228899c0a74c5cd52681d61
           </expand>
           <select />
         </subPane>
@@ -197,9 +260,12 @@
       <option name="customRunCommand" value="" />
     </configuration>
   </component>
+<<<<<<< HEAD
   <component name="StructureViewFactory">
     <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
   </component>
+=======
+>>>>>>> 419fb14d307f9d2fe228899c0a74c5cd52681d61
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -214,7 +280,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="531" y="23" width="922" height="807" extended-state="0" />
+=======
+    <frame x="519" y="23" width="922" height="807" extended-state="0" />
+>>>>>>> 419fb14d307f9d2fe228899c0a74c5cd52681d61
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -225,7 +295,11 @@
       <window_info anchor="bottom" id="Python Console" />
       <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32957748" />
       <window_info anchor="right" id="Remote Host" />
+<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49789914" visible="true" weight="0.21363637" />
+=======
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49789914" weight="0.25" />
+>>>>>>> 419fb14d307f9d2fe228899c0a74c5cd52681d61
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="SciView" />
@@ -248,6 +322,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/post/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 419fb14d307f9d2fe228899c0a74c5cd52681d61
     <entry file="file://$PROJECT_DIR$/post/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -269,6 +353,19 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/bbs/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#637#669#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+>>>>>>> 419fb14d307f9d2fe228899c0a74c5cd52681d61
     <entry file="file://$PROJECT_DIR$/post/templates/create_post.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -283,6 +380,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/bbs/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -297,12 +395,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="283">
           <caret line="43" column="30" lean-forward="true" selection-start-line="43" selection-start-column="30" selection-end-line="43" selection-end-column="30" />
+=======
+    <entry file="file://$PROJECT_DIR$/post/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="10" column="31" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+>>>>>>> 419fb14d307f9d2fe228899c0a74c5cd52681d61
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/post/templates/post_list.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -317,5 +422,7 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> 419fb14d307f9d2fe228899c0a74c5cd52681d61
   </component>
 </project>
