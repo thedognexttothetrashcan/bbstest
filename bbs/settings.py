@@ -119,3 +119,32 @@ STATICFILES_DIRS = [
 ]
 MEDIA_ROOT = 'medias'
 MEDIA_URL = '/medias/'
+# Django 默认缓存配置
+
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/7",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+            "PICKLE_VERSION": -1,
+        }
+    }
+}
+
+
+
+
+'''
+微博接入
+APP_key = ''
+APP_SECRET = ''
+授权回调页
+'''
+
+
+
+
+
+
+

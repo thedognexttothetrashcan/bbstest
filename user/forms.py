@@ -8,7 +8,6 @@ class RegisterForm(forms.ModelForm):
         fields = ['nickname', 'password', 'age', 'sex', 'icon']
 
     password2 = forms.CharField(max_length=128)
-    print(password2,'qweqweqwewq')
 
     def clean_password2(self):
         '''检查两次输入是否一致'''
