@@ -3,6 +3,7 @@ from math import ceil
 from django.core.cache import cache
 from django.shortcuts import render, redirect
 
+from post.helper import page_cache
 from post.models import Post
 
 
@@ -58,7 +59,7 @@ def delete_post(request):
     Post.objects.get(pk=post_id).delete()
     return redirect('/')
 
-
+@page_cache(5)
 def post_list(request):
     page = int(request.GET.get('page', 1))
     total = Post.objects.count()  # 文章总数
