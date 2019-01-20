@@ -4,7 +4,7 @@ from django.core.cache import cache
 from django.shortcuts import render, redirect
 
 from post.helper import page_cache, get_top_n
-from post.models import Post
+from post.models import Post, Comment
 from common import rds
 from user.helper import login_required
 
@@ -15,7 +15,7 @@ def create_post(request):
         title = request.POST.get('title')
         content = request.POST.get('content')
         uid = request.session['uid']
-        post = Post.objects.create(title=title,uid=uid, content=content)
+        post = Post.objects.create(title=title, uid=uid, content=content)
         return redirect('/post/read/?post_id=%d' % post.id)
     else:
         return render(request, 'create_post.html')
@@ -61,6 +61,7 @@ def read_post(request):
     rds.zincrby(name='ReadCounter', amount=post_id, value=0)
     return render(request, 'read_post.html', {'post': post})
 
+
 @login_required
 def delete_post(request):
     post_id = int(request.GET.get('post_id'))
@@ -98,5 +99,10 @@ def top10(request):
     return render(request, 'top10.html', {'rank_data': rank_data})
 
 
-
-
+@login_required
+def comment(request):
+    uid = request.session['uid']
+    post_id = int(request.POST.get('post_id'))
+    content = request.POST.get('content')
+    Comment.objects.create(uid=uid, post_id=post_id, content=content)
+    return redirect('/post/read/?post_id=%s' % post_id)
