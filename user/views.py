@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.hashers import make_password,check_password
+
+from post.helper import page_cache
 from user.forms import RegisterForm
 from user.models import User
 
@@ -37,12 +39,14 @@ def login(request):
             return render(request,'login.html',{'error':'密码错误'})
     else:
         return render(request, 'login.html',)
-
 def logout(request):
     request.session.flush()
     return redirect('/')
 
+
+@page_cache(10)
 def user_info(request):
     uid = request.session.get('uid')
+    print(uid)
     user = User.objects.get(pk=uid)
     return render(request, 'user_info.html',{'user':user})

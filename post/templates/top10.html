@@ -14,13 +14,13 @@
  -->
 
 <body style="background-color: transparent;">
-    <ol>
-        {% for d in rank_data %}
+<ol>
+    {% for d in rank_data %}
         <li>
-            <a href="/post/read/?post_id={{d.0.id}}" onclick="window.top.location.href=this.href">{{d.0.title}}</a>
-            <span style="float: right;">{{d.1}}</span>
+                        <a href="/post/read/?post_id={{d.0.id}}" onclick="window.top10.location.href=this.href">{{d.0.title}}</a>
+            <span style="float: right;">{{ d.1 }}</span>
         </li>
-        {% endfor %}
-    </ol>
+    {% endfor %}
+</ol>
 </body>
 </html>
