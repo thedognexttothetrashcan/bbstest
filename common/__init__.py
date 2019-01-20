@@ -3,3 +3,6 @@ from django.conf import settings
 
 
 rds = Redis(**settings.REDIS)
+
+
+

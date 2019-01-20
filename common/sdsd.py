@@ -1,7 +1,8 @@
 import requests
 
-# for i in range(1):
-#     requests.get(url='http://127.0.0.1:8000/post/read/?post_id=22')
+for i in range(10):
+    res = requests.get(url='http://127.0.0.1:8000/')
+    print(res.text)
 
 post = [(2, 4), (6, 23), (12, 56), (74, 25)]
 

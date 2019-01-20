@@ -3,6 +3,7 @@ from django.contrib.auth.hashers import make_password,check_password
 
 from post.helper import page_cache
 from user.forms import RegisterForm
+from user.helper import login_required
 from user.models import User
 
 
@@ -44,6 +45,7 @@ def logout(request):
     return redirect('/')
 
 
+@login_required
 @page_cache(10)
 def user_info(request):
     uid = request.session.get('uid')

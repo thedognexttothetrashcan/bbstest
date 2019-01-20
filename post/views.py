@@ -6,18 +6,22 @@ from django.shortcuts import render, redirect
 from post.helper import page_cache, get_top_n
 from post.models import Post
 from common import rds
+from user.helper import login_required
 
 
+@login_required
 def create_post(request):
     if request.method == 'POST':
         title = request.POST.get('title')
         content = request.POST.get('content')
-        post = Post.objects.create(title=title, content=content)
+        uid = request.session['uid']
+        post = Post.objects.create(title=title,uid=uid, content=content)
         return redirect('/post/read/?post_id=%d' % post.id)
     else:
         return render(request, 'create_post.html')
 
 
+@login_required
 def edit_post(request):
     if request.method == 'POST':
         post_id = int(request.POST.get('post_id'))
@@ -57,7 +61,7 @@ def read_post(request):
     rds.zincrby(name='ReadCounter', amount=post_id, value=0)
     return render(request, 'read_post.html', {'post': post})
 
-
+@login_required
 def delete_post(request):
     post_id = int(request.GET.get('post_id'))
     Post.objects.get(pk=post_id).delete()
