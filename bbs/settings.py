@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
@@ -26,7 +25,6 @@ SECRET_KEY = '(9zkf1hvh)hjf*35i)4cgkgh(ek!7ujd%c!u%0&#vp@dblbwxi'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -65,7 +63,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'bbs.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
@@ -75,7 +72,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -95,7 +91,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
@@ -108,7 +103,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
@@ -132,8 +126,12 @@ CACHES = {
     }
 }
 
-
-
+# Redis 配置
+REDIS = {
+    'host': 'localhost',
+    'port': 6379,
+    'db': 7
+}
 
 '''
 微博接入
@@ -141,10 +139,3 @@ APP_key = ''
 APP_SECRET = ''
 授权回调页
 '''
-
-
-
-
-
-
-
