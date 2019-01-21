@@ -4,7 +4,7 @@ from django.core.cache import cache
 from django.shortcuts import render, redirect
 
 from post.helper import page_cache, get_top_n
-from post.models import Post, Comment
+from post.models import Post, Comment, Tag
 from common import rds
 from user.helper import login_required
 
@@ -31,6 +31,9 @@ def edit_post(request):
         post.content = request.POST.get('content')
         post.save()
 
+        str_tags = request.POST.get('tags')
+        tag_names = [t.strip() for t in str_tags.title().replace('，', ',').split(',')]
+        post.update_tags(tag_names)
         # 更新帖子缓存
         key = 'Post-%s' % post_id
         cache.set(key, post)
@@ -39,7 +42,8 @@ def edit_post(request):
     else:
         post_id = request.GET.get('post_id')
         post = Post.objects.get(pk=post_id)
-    return render(request, 'edit_post.html', {'post': post})
+        str_tags = ','.join([t.name for t in post.tags()])
+        return render(request, 'edit_post.html', {'post': post, 'tags':str_tags})
 
     #     return redirect('/post/read/?post_id=%d'% post.id)
     # else:
