@@ -7,9 +7,11 @@ from post.helper import page_cache, get_top_n
 from post.models import Post, Comment, Tag
 from common import rds
 from user.helper import login_required
+from user.helper import need_prem
 
 
 @login_required
+# @need_prem('add_post')
 def create_post(request):
     if request.method == 'POST':
         title = request.POST.get('title')
@@ -43,7 +45,7 @@ def edit_post(request):
         post_id = request.GET.get('post_id')
         post = Post.objects.get(pk=post_id)
         str_tags = ','.join([t.name for t in post.tags()])
-        return render(request, 'edit_post.html', {'post': post, 'tags':str_tags})
+        return render(request, 'edit_post.html', {'post': post, 'tags': str_tags})
 
     #     return redirect('/post/read/?post_id=%d'% post.id)
     # else:
@@ -67,6 +69,7 @@ def read_post(request):
 
 
 @login_required
+@need_prem('del_post')
 def delete_post(request):
     post_id = int(request.GET.get('post_id'))
     Post.objects.get(pk=post_id).delete()
@@ -110,3 +113,12 @@ def comment(request):
     content = request.POST.get('content')
     Comment.objects.create(uid=uid, post_id=post_id, content=content)
     return redirect('/post/read/?post_id=%s' % post_id)
+
+
+@login_required
+@need_prem('del_commet')
+def del_commet(request):
+    post_id = request.GET.get('post_id')
+    comment_id = request.GET.get('comment_id ')
+    Comment.objects.get(pk=comment_id).delete()
+    return redirect('/post/read?post_id%s' % post_id)

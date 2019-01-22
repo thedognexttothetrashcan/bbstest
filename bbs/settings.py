@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '(9zkf1hvh)hjf*35i)4cgkgh(ek!7ujd%c!u%0&#vp@dblbwxi'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -143,3 +143,58 @@ APP_key = ''
 APP_SECRET = ''
 授权回调页
 '''
+
+
+# LOGING
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': True,
+    'formatters': {
+        'simple': {
+            'format': '%(asctime)s %(module)s.%(funcName)s: %(message)s',
+            'datefmt': '%Y-%m-%d %H:%M:%S',
+        },
+        'verbose': {
+            'format': ('%(asctime)s %(levelname)s [%(process)d-%(threadName)s] '
+                       '%(module)s.%(funcName)s line %(lineno)d: %(message)s'),
+            'datefmt': '%Y-%m-%d %H:%M:%S',
+        }
+    },
+
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'level': 'DEBUG' if DEBUG else 'WARNING'
+        },
+        'info': {
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'filename': f'{BASE_DIR}/info.log',
+            'when': 'D',  # 每天切割日志
+            'backupCount': 30,
+            'formatter': 'simple',
+            'level': 'INFO',
+        },
+        'error': {
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'filename': f'{BASE_DIR}/error.log',
+            'when': 'W0',  # 每周一切割日志
+            'backupCount': 4,
+            'formatter': 'verbose',
+            'level': 'WARNING',
+        }
+    },
+
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+        },
+        'inf': {
+            'handlers': ['info'],
+            'propagate': True,
+        },
+        'err': {
+            'handlers': ['error'],
+            'propagate': True,
+        }
+    }
+}
