@@ -15,7 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
@@ -23,10 +22,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '(9zkf1hvh)hjf*35i)4cgkgh(ek!7ujd%c!u%0&#vp@dblbwxi'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -45,6 +43,10 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'common.middleware.BlockMiddleware'
+    # 'common.middleware.test_middleware'
+
 ]
 
 ROOT_URLCONF = 'bbs.urls'
@@ -65,7 +67,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'bbs.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
@@ -75,7 +76,6 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
@@ -95,7 +95,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
@@ -108,7 +107,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
@@ -132,8 +130,12 @@ CACHES = {
     }
 }
 
-
-
+# Redis 配置
+REDIS = {
+    'host': 'localhost',
+    'port': 6379,
+    'db': 7
+}
 
 '''
 微博接入
@@ -143,8 +145,56 @@ APP_SECRET = ''
 '''
 
 
+# LOGING
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': True,
+    'formatters': {
+        'simple': {
+            'format': '%(asctime)s %(module)s.%(funcName)s: %(message)s',
+            'datefmt': '%Y-%m-%d %H:%M:%S',
+        },
+        'verbose': {
+            'format': ('%(asctime)s %(levelname)s [%(process)d-%(threadName)s] '
+                       '%(module)s.%(funcName)s line %(lineno)d: %(message)s'),
+            'datefmt': '%Y-%m-%d %H:%M:%S',
+        }
+    },
 
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'level': 'DEBUG' if DEBUG else 'WARNING'
+        },
+        'info': {
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'filename': f'{BASE_DIR}/info.log',
+            'when': 'D',  # 每天切割日志
+            'backupCount': 30,
+            'formatter': 'simple',
+            'level': 'INFO',
+        },
+        'error': {
+            'class': 'logging.handlers.TimedRotatingFileHandler',
+            'filename': f'{BASE_DIR}/error.log',
+            'when': 'W0',  # 每周一切割日志
+            'backupCount': 4,
+            'formatter': 'verbose',
+            'level': 'WARNING',
+        }
+    },
 
-
-
-
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+        },
+        'inf': {
+            'handlers': ['info'],
+            'propagate': True,
+        },
+        'err': {
+            'handlers': ['error'],
+            'propagate': True,
+        }
+    }
+}
